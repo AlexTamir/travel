@@ -93,6 +93,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .swiper-container {
+    height: px2rem(370px) !important;
+  }
+  .swiper-pagination-bullets {
+    bottom: 0 !important;
+  }
+
   .icons {
     width: 100%;
     height: px2rem(370px);
@@ -128,14 +135,8 @@ export default {
   }
 </style>
 
-<style lang="scss">
-  .swiper-container {
-    height: px2rem(370px) !important;
-  }
-  .swiper-pagination-bullets {
-    bottom: 0 !important;
-  }
-  .swiper-pagination-bullet-active {
+<style scoped>
+  .icons >>> .swiper-pagination-bullet-active {
     background: rgba(0,175,190,.8) !important;
   }
 </style>

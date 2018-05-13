@@ -54,8 +54,8 @@ export default {
   }
 </style>
 
-<style lang="scss">
-  .swiper-pagination-bullet-active {
+<style scoped>
+  .wrapper >>> .swiper-pagination-bullet-active {
     background: #fff !important;
   }
 </style>
