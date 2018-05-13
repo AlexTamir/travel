@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <!-- 当前路由地址所对应的内容 -->
+    <!-- 路由出口 -->
+    <!-- 路由匹配到的组件将渲染在这里 -->
     <router-view/>
   </div>
 </template>

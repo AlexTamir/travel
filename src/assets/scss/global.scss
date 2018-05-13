@@ -1,0 +1,13 @@
+/*
+ * @Author: Tamir 
+ * @Date: 2018-05-12 22:14:07 
+ * @Last Modified by: Tamir
+ * @Last Modified time: 2018-05-13 09:36:04
+ */
+
+@function px2rem($px) {
+  $rem: 75px;
+  @return ($px / $rem) + rem;
+}
+
+$bgColor: #00bcd4;
