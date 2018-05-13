@@ -4,8 +4,8 @@
       <!-- slides -->
       <swiper-slide v-for="(page, index) of pages" :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
-          <div class="icon-img">
-            <img class="icon-img-content" :src="item.imgURL" :alt="item.desc">
+          <div class="icon-img-wrapper">
+            <img class="icon-img" :src="item.imgURL" :alt="item.desc">
           </div>
           <p class="icon-desc">{{item.desc}}</p>
         </div>
@@ -114,12 +114,12 @@ export default {
       text-align: center;
       overflow: hidden;
 
-      .icon-img {
+      .icon-img-wrapper {
         display: inline-block;
         width: px2rem(110px);
         height: px2rem(110px);
 
-        .icon-img-content {
+        .icon-img {
           width: px2rem(110px);
           height: px2rem(110px);
         }
