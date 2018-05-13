@@ -18,6 +18,8 @@ export default {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
+        autoplay: 3000,
+        speed: 2000,
         loop: true
       },
       swiperList: [{
@@ -27,6 +29,10 @@ export default {
       {
         id: '0002',
         imgURL: 'http://img1.qunarzz.com/piao/fusion/1805/33/0c4caa3a5a69d502.jpg_750x200_3f445c0b.jpg'
+      },
+      {
+        id: '0003',
+        imgURL: 'http://img1.qunarzz.com/piao/fusion/1804/f2/91b285a08ee21c02.jpg_750x200_8a73fd08.jpg'
       }]
     }
   }
@@ -48,7 +54,7 @@ export default {
   }
 </style>
 
-<style>
+<style lang="scss">
   .swiper-pagination-bullet-active {
     background: #fff !important;
   }
