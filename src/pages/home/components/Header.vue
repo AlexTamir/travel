@@ -23,35 +23,39 @@ export default {
 <style lang="scss" scoped>
   .header {
     display: flex;
-    line-height: px2rem(86px);
+    width: 100%;
+    height: px2rem(88px);
+    line-height: px2rem(88px);
     background: $bgColor;
     color: #fff;
     font-size: 14px;
 
     .header-left {
-      width: px2rem(64px);
+      width: px2rem(80px);
+      height: px2rem(88px);
       float: left;
-      text-align: center;
 
       .back-icon {
-        font-size: px2rem(40px);
+        font-size: px2rem(36px);
+        margin-left: px2rem(12px);
       }
     }
 
     .header-input {
       flex: 1;
-      height: px2rem(64px);
-      line-height: px2rem(64px);
-      margin-top: px2rem(12px);
-      margin-left: px2rem(20px);
-      padding-left: px2rem(20px);
-      border-radius: px2rem(10px);
+      box-sizing: border-box;
+      height: px2rem(60px);
+      line-height: px2rem(60px);
+      margin: px2rem(14px) 0;
       background: #fff;
-      color: #ccc;
+      border-radius: px2rem(6px);
+      color: #e4e7ea;
+      padding-left: px2rem(20px);
     }
 
     .header-right {
-      width: px2rem(124px);
+      width: px2rem(132px);
+      height: 100%;
       float: right;
       text-align: center;
 
