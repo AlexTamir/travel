@@ -1,0 +1,156 @@
+<template>
+  <div class="list" ref="wrapper">
+    <div>
+      <div class="area">
+        <div class="title border-topbottom">当前城市</div>
+        <div class="button-list">
+          <div class="button-wrapper">
+            <div class="button">广州</div>
+          </div>
+        </div>
+      </div>
+      <div class="area">
+        <div class="title border-topbottom">热门城市</div>
+        <div class="button-list">
+          <div class="button-wrapper">
+            <div class="button">北京</div>
+          </div>
+          <div class="button-wrapper">
+            <div class="button">上海</div>
+          </div>
+          <div class="button-wrapper">
+            <div class="button">杭州</div>
+          </div>
+          <div class="button-wrapper">
+            <div class="button">三亚</div>
+          </div>
+          <div class="button-wrapper">
+            <div class="button">香港</div>
+          </div>
+          <div class="button-wrapper">
+            <div class="button">广州</div>
+          </div>
+          <div class="button-wrapper">
+            <div class="button">成都</div>
+          </div>
+          <div class="button-wrapper">
+            <div class="button">桂林</div>
+          </div>
+        </div>
+      </div>
+      <div class="area">
+        <div class="title border-topbottom">A</div>
+        <div class="item-list">
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+        </div>
+      </div>
+      <div class="area">
+        <div class="title border-topbottom">A</div>
+        <div class="item-list">
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+        </div>
+      </div>
+      <div class="area">
+        <div class="title border-topbottom">A</div>
+        <div class="item-list">
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+        </div>
+      </div>
+      <div class="area">
+        <div class="title border-topbottom">A</div>
+        <div class="item-list">
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import Bscroll from 'better-scroll'
+
+export default {
+  name: 'CityList',
+  mounted () {
+    this.scroll = new Bscroll(this.$refs.wrapper)
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+  .border-topbottom {
+    &::before {
+      border-color: #ccc;
+    }
+    &::after {
+      border-color: #ccc;
+    }
+  }
+  .border-bottom {
+    &::before {
+      border-color: #ccc;
+    }
+  }
+  .list {
+    position: absolute;
+    top: px2rem(160px);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+
+    .title {
+      height: px2rem(66px);
+      font-size: 14px;
+      line-height: px2rem(66px);
+      background: #eee;
+      padding-left: px2rem(20px);
+      color: #666;
+    }
+    .button-list {
+      padding: px2rem(10px) px2rem(60px) px2rem(10px) px2rem(10px);
+      overflow: hidden;
+      font-size: 14px;
+
+      .button-wrapper {
+        width: 33.33%;
+        float: left;
+
+        .button {
+          margin: px2rem(10px);
+          padding: px2rem(10px) 0;
+          text-align: center;
+          border: px2rem(2px) solid #ccc;
+          border-radius: px2rem(6px);
+        }
+      }
+    }
+    .item-list {
+      .item{
+        line-height: px2rem(54px);
+        color: #666;
+        padding-left: px2rem(20px);
+      }
+    }
+  }
+</style>
