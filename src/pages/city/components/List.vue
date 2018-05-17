@@ -17,7 +17,7 @@
           </div>
         </div>
       </div>
-      <div class="area" v-for="(lists, key) of cities" :key="key">
+      <div class="area" v-for="(lists, key) of cities" :key="key" :ref="key">
         <div class="title border-topbottom">{{key}}</div>
         <div class="item-list" v-for="item of lists" :key="item.id">
           <div class="item border-bottom">{{item.name}}</div>
@@ -34,10 +34,19 @@ export default {
   name: 'CityList',
   props: {
     hotCities: Array,
-    cities: Object
+    cities: Object,
+    letter: String
   },
   mounted () {
     this.scroll = new Bscroll(this.$refs.wrapper)
+  },
+  watch: {
+    letter () {
+      if (this.letter) {
+        const element = this.$refs[this.letter][0]
+        this.scroll.scrollToElement(element)
+      }
+    }
   }
 }
 </script>
@@ -65,11 +74,11 @@ export default {
     overflow: hidden;
 
     .title {
-      height: px2rem(66px);
-      font-size: 14px;
-      line-height: px2rem(66px);
+      // height: px2rem(66px);
+      // line-height: px2rem(66px);
+      padding: px2rem(20px);
       background: #eee;
-      padding-left: px2rem(20px);
+      font-size: 14px;
       color: #666;
     }
     .button-list {
@@ -93,9 +102,10 @@ export default {
     .item-list {
       font-size: 14px;
       .item{
-        line-height: px2rem(54px);
+        // height: px2rem(54px);
+        // line-height: px2rem(54px);
+        padding: px2rem(20px);
         color: #666;
-        padding-left: px2rem(20px);
       }
     }
   }

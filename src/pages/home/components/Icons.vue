@@ -57,6 +57,7 @@ export default {
     width: 100%;
     height: px2rem(370px);
     padding-top: px2rem(10px);
+    margin-bottom: px2rem(20px);
     overflow: hidden;
 
     .icon {
@@ -81,6 +82,8 @@ export default {
       .icon-desc {
         margin-top: px2rem(18px);
         color: #212121;
+        height: px2rem(32px);
+        line-height: px2rem(32px);
         font-size: px2rem(28px);
         @include ellipsis;
       }

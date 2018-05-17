@@ -27,9 +27,9 @@ export default {
 
 <style lang="scss" scoped>
   .title {
-    margin-top: px2rem(20px);
-    line-height: px2rem(80px);
-    text-indent: px2rem(20px);
+    // line-height: px2rem(80px);
+    // text-indent: px2rem(20px);
+    padding: px2rem(30px) px2rem(20px);
     background: #eee;
     font-size: px2rem(28px);
   }
