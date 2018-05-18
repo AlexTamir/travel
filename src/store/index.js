@@ -7,15 +7,15 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state,
-  mutations,
+  mutations
   // actions: {
   //   changeCity (context, city) {
   //     context.commit('changeCity', city)
   //   }
   // },
-  getters: {
-    doubleCity (state) {
-      return state.city + '+' + state.city
-    }
-  }
+  // getters: {
+  //   doubleCity (state) {
+  //     return state.city + '+' + state.city
+  //   }
+  // }
 })
