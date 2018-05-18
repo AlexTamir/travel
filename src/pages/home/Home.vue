@@ -16,6 +16,8 @@ import HomeRecommend from './components/Recommend'
 import HomeWeekend from './components/Weekend'
 import axios from 'axios'
 
+document.addEventListener('touchmove', function (event) { event.preventDefault() }, false)
+
 export default {
   name: 'Home',
   components: {
