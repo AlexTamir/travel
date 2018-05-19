@@ -16,15 +16,6 @@ import HomeRecommend from './components/Recommend'
 import HomeWeekend from './components/Weekend'
 import axios from 'axios'
 import { mapState } from 'vuex'
-// window.addEventListener('touchmove', event => {
-//   // 判断默认行为是否可以被禁用
-//   if (event.cancelable) {
-//     // 判断默认行为是否已经被禁用
-//     if (!event.defaultPrevented) {
-//       event.preventDefault()
-//     }
-//   }
-// })
 
 export default {
   name: 'Home',
@@ -49,7 +40,9 @@ export default {
   },
   methods: {
     getHomeInfo () {
-      axios.get('/api/index.json?city=' + this.city)
+      axios.get('/api/index.json', {
+        city: this.city
+      })
         .then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {
@@ -72,6 +65,12 @@ export default {
       this.lastCity = this.city
       this.getHomeInfo()
     }
+  },
+  beforeRouteLeave (to, from, next) {
+    if (from.meta.keepAlive) {
+      from.meta.savedPosition = document.documentElement.scrollTop
+    }
+    next()
   }
 }
 </script>

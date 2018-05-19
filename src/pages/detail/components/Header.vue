@@ -37,11 +37,10 @@ export default {
       this.isShowAbs = true
     }
   },
-  activated () {
-    this.handleScroll()
+  mounted () {
     window.addEventListener('scroll', this.handleScroll)
   },
-  deactivated () {
+  beforeDestroy () {
     window.removeEventListener('scroll', this.handleScroll)
   }
 }
@@ -66,6 +65,7 @@ export default {
     }
   }
   .header-fixed {
+    z-index: 13;
     overflow: hidden;
     position: fixed;
     top: 0;
