@@ -2,12 +2,22 @@
  * @Author: Tamir 
  * @Date: 2018-05-12 22:14:07 
  * @Last Modified by: Tamir
- * @Last Modified time: 2018-05-15 11:52:05
+ * @Last Modified time: 2018-05-19 00:35:26
  */
 
 @function px2rem($px) {
   $rem: 75px;
   @return ($px / $rem)+rem;
+}
+
+@function setHeight($px) {
+  $rem: 750px;
+  @return ($px / $rem * 10)+rem;
+}
+
+@function setImgHeight($px) {
+  $rem: 750px;
+  @return ($px / $rem * 8)+rem;
 }
 
 @mixin ellipsis {

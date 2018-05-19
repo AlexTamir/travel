@@ -5,7 +5,7 @@
         v-for="item of letters"
         :key="item"
         :ref="item"
-        @touchstart.prevent="handleTouchStart"
+        @touchstart="handleTouchStart"
         @touchmove.stop.prevent="handleTouchMove"
       >{{item}}</li>
     </div>
@@ -72,7 +72,7 @@ export default {
     .itemwrapper {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      // justify-content: center;
       align-items: center;
       width: px2rem(40px);
       padding: px2rem(20px) 0;
@@ -80,10 +80,12 @@ export default {
       background: rgba(167, 167, 167, 0.5);
 
       .item {
-        padding: px2rem(4px);
+        width: 100%;
+        padding: px2rem(6px) 0;
         line-height: 1;
         font-size: px2rem(22px);
         color: #000;
+        text-align: center;
       }
     }
   }

@@ -39,8 +39,8 @@ export default {
 
     .item-img-wrapper {
       overflow: hidden;
-      height: 0;
-      padding-bottom: 37.4375%;
+      // height: 0;
+      // padding-bottom: 37.4375%;
 
       .item-img {
         width: 100%;
@@ -49,7 +49,7 @@ export default {
 
     .item-info {
       font-size: px2rem(28px);
-      padding: px2rem(10px);
+      padding: px2rem(20px);
 
       .item-title {
         line-height: px2rem(54px);
