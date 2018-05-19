@@ -1,7 +1,7 @@
 let city = '广州'
 try {
-  if (localStorage.city) {
-    city = localStorage.city
+  if (localStorage) {
+    city = localStorage.getItem('city') || '广州'
   }
 } catch (e) {}
 
