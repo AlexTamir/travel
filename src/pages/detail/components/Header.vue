@@ -38,6 +38,7 @@ export default {
     }
   },
   activated () {
+    this.handleScroll()
     window.addEventListener('scroll', this.handleScroll)
   },
   deactivated () {
