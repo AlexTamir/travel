@@ -33,7 +33,8 @@ export default {
       height: px2rem(88px);
       line-height: px2rem(88px);
       color: #fff;
-      font-size: px2rem(36px);
+      font-size: px2rem(35px);
+      font-weight: bold;
     }
   }
 </style>

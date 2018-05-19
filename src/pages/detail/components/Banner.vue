@@ -47,7 +47,7 @@ export default {
   .banner {
     overflow: hidden;
     height: 0;
-    padding-bottom: 54%;
+    padding-bottom: 55%;
     position: relative;
 
     .banner-img {
