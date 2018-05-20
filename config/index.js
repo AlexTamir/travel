@@ -12,10 +12,10 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://localhost:80',
-        pathRewrite: {
-          '^/api': '/qunar/api'
-        }
+        target: 'http://localhost:80'
+        // pathRewrite: {
+        //   '^/api': '/qunar/api'
+        // }
       }
     },
 
@@ -57,13 +57,13 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/project',
+    assetsPublicPath: '/qunar/project/',
 
     /**
      * Source Maps
      */
 
-    productionSourceMap: true,
+    productionSourceMap: false,
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
 
