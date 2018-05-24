@@ -5,8 +5,8 @@
     </div>
     <div class="search-content" ref="search-content" v-show="keyword">
       <ul>
-        <li class="search-item border-bottom" @click="handleCityClick(item.name)" v-for="item of list" :key="item.id">{{item.name}}</li>
-        <li class="search-item border-bottom" v-show="hasNoData">没有找到匹配数据</li>
+        <li class="search-item" @click="handleCityClick(item.name)" v-for="item of list" :key="item.id">{{item.name}}</li>
+        <li class="search-item" v-show="hasNoData">没有找到匹配数据</li>
       </ul>
     </div>
   </div>
@@ -75,7 +75,7 @@ export default {
     height: px2rem(72px);
     padding: 0 px2rem(10px);
     background: $bgColor;
-    font-size: 14px;
+    @include font-dpr(14px);
 
     .search-input {
       box-sizing: border-box;
@@ -83,8 +83,8 @@ export default {
       height: px2rem(62px);
       line-height: px2rem(62px);
       padding: 0 px2rem(10px);
-      text-align: center;
       border-radius: px2rem(6px);
+      text-align: center;
       color: #666;
     }
   }
@@ -92,17 +92,19 @@ export default {
     z-index: 1;
     overflow: hidden;
     position: absolute;
-    top: px2rem(160px);
+    top: px2rem(158px);
     left: 0;
     right: 0;
     bottom: 0;
     background: #eee;
 
     .search-item {
-      font-size: 14px;
-      padding: px2rem(20px);
+      line-height: px2rem(62px);
+      padding-left: px2rem(20px);
+      border-bottom: 1px solid #eaeaea;
       color: #666;
       background: #fff;
+      @include font-dpr(14px);
     }
   }
 </style>

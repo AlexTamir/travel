@@ -64,27 +64,20 @@ export default {
     display: flex;
     align-items: center;
     position: absolute;
-    top: px2rem(160px);
+    top: px2rem(158px);
     right: 0;
     bottom: 0;
     font-family:Helvetica;
 
     .itemwrapper {
-      display: flex;
-      flex-direction: column;
-      // justify-content: center;
-      align-items: center;
       width: px2rem(40px);
       padding: px2rem(20px) 0;
       border-radius: px2rem(20px);
       background: rgba(167, 167, 167, 0.5);
 
       .item {
-        width: 100%;
         padding: px2rem(6px) 0;
-        line-height: 1;
-        font-size: px2rem(22px);
-        color: #000;
+        font-size: px2rem(24px);
         text-align: center;
       }
     }

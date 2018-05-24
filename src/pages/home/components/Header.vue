@@ -33,7 +33,6 @@ export default {
     display: flex;
     align-items: center;
     height: px2rem(86px);
-    // line-height: px2rem(86px);
     background: $bgColor;
     color: #fff;
     @include font-dpr(14px);
@@ -52,7 +51,6 @@ export default {
       flex: 1;
       height: px2rem(64px);
       line-height: px2rem(64px);
-      // margin-top: px2rem(12px);
       margin-left: px2rem(10px);
       padding-left: px2rem(10px);
       border-radius: px2rem(10px);

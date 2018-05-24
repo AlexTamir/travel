@@ -34,7 +34,7 @@ export default {
     overflow: hidden;
     display: flex;
     height: px2rem(200px);
-    border-bottom: 0.5px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
     @include font-dpr(14px);
 
     .item-img {

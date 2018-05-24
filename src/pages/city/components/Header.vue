@@ -15,26 +15,22 @@ export default {
 
 <style lang="scss" scoped>
   .header {
-    position: relative;
-    width: 100%;
-    height: px2rem(88px);
-    line-height: px2rem(88px);
     overflow: hidden;
+    position: relative;
+    height: px2rem(86px);
+    line-height: px2rem(86px);
     text-align: center;
-    font-size: 16px;
-    color: #fff;
     background: $bgColor;
+    color: #fff;
+    @include font-dpr(16px);
 
     .back-icon {
       position: absolute;
       left: 0;
       top: 0;
-      width: px2rem(80px);
-      height: px2rem(88px);
-      line-height: px2rem(88px);
+      width: px2rem(64px);
+      @include font-dpr(20px);
       color: #fff;
-      font-size: px2rem(35px);
-      font-weight: bold;
     }
   }
 </style>
