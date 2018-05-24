@@ -2,14 +2,54 @@
  * @Author: Tamir 
  * @Date: 2018-05-12 22:14:07 
  * @Last Modified by: Tamir
- * @Last Modified time: 2018-05-19 00:35:26
+ * @Last Modified time: 2018-05-23 23:10:59
  */
 
+
+
+// 界面顶部颜色
+$bgColor: #00bcd4;
+
+// 
 @function px2rem($px) {
   $rem: 75px;
   @return ($px / $rem)+rem;
 }
 
+// 适配dpr的字体大小
+@mixin font-dpr($font-size){
+  font-size: $font-size;
+
+  [data-dpr="2"] & {
+      font-size: $font-size * 2;
+  }
+
+  [data-dpr="3"] & {
+      font-size: $font-size * 3;
+  }
+}
+
+// 一些属性的适配
+@mixin px-dpr($property, $px) {
+  #{$property}: $px;
+
+  [data-dpr="2"] & {
+    #{$property}: $px * 2;
+  }
+
+  [data-dpr="3"] & {
+    #{$property}: $px * 3;
+  }
+}
+
+// 文字超出显示...
+@mixin ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 看看是否要干掉
 @function setHeight($px) {
   $rem: 750px;
   @return ($px / $rem * 10)+rem;
@@ -20,10 +60,6 @@
   @return ($px / $rem * 8)+rem;
 }
 
-@mixin ellipsis {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
 
-$bgColor: #00bcd4;
+
+

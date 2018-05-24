@@ -3,8 +3,8 @@
     <div class="header-left">
       <span class="iconfont back-icon">&#xe624;</span>
     </div>
-    <div class="header-input">
-      <span class="iconfont">&#xe632;</span>
+    <div class="header-input search-icon">
+      <span class="iconfont search-icon">&#xe632;</span>
       输入城市/景点/游玩主题
     </div>
     <router-link to='/city'>
@@ -31,48 +31,47 @@ export default {
 <style lang="scss" scoped>
   .header {
     display: flex;
-    width: 100%;
-    height: px2rem(88px);
-    line-height: px2rem(88px);
+    align-items: center;
+    height: px2rem(86px);
+    // line-height: px2rem(86px);
     background: $bgColor;
     color: #fff;
-    font-size: 14px;
+    @include font-dpr(14px);
 
     .header-left {
-      width: px2rem(80px);
-      height: px2rem(88px);
+      width: px2rem(64px);
       float: left;
+      text-align: center;
 
       .back-icon {
-        font-size: px2rem(35px);
-        font-weight: bold;
-        margin-left: px2rem(20px);
+        @include font-dpr(20px);
       }
     }
 
     .header-input {
       flex: 1;
-      box-sizing: border-box;
-      height: px2rem(60px);
-      line-height: px2rem(60px);
-      margin: px2rem(14px) 0;
+      height: px2rem(64px);
+      line-height: px2rem(64px);
+      // margin-top: px2rem(12px);
+      margin-left: px2rem(10px);
+      padding-left: px2rem(10px);
+      border-radius: px2rem(10px);
       background: #fff;
-      border-radius: px2rem(6px);
-      color: #e4e7ea;
-      padding-left: px2rem(20px);
+      color: #ccc;
+
+      .search-icon {
+        @include font-dpr(15px);
+      }
     }
 
     .header-right {
-      min-width: px2rem(112px);
-      padding: 0 px2rem(10px);
-      height: 100%;
       float: right;
+      padding: 0 px2rem(10px);
       text-align: center;
       color: #fff;
 
       .arrow-icon {
-        margin-left: px2rem(-4px);
-        font-size: px2rem(24px);
+        @include font-dpr(12px);
       }
     }
   }

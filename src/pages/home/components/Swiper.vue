@@ -22,7 +22,7 @@ export default {
       swiperOption: {
         pagination: '.swiper-pagination',
         autoplay: 3000,
-        speed: 2000,
+        // speed: 2000,
         loop: true
       }
     }
@@ -36,22 +36,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .wrapper /deep/ .swiper-pagination-bullet-active {
+    background: #fff;
+  }
+  .wrapper /deep/ .swiper-pagination-bullet {
+    @include px-dpr(width, 8px);
+    @include px-dpr(height, 8px);
+    @include px-dpr(margin-left, 5px);
+    @include px-dpr(margin-right, 5px);
+  }
   .wrapper {
     /* 如果设置height，是相对父级元素；设置padding的话，width是100%，height相对于width撑开26.67%的高度 */
+    overflow: hidden;
     width: 100%;
     height: 0;
-    overflow: hidden;
     padding-bottom: 26.67%;
     background: #eee;
 
     .swiper-img {
       width: 100%;
     }
-  }
-</style>
-
-<style scoped>
-  .wrapper >>> .swiper-pagination-bullet-active {
-    background: #fff !important;
   }
 </style>

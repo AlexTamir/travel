@@ -46,53 +46,59 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .swiper-container {
-    height: px2rem(370px) !important;
+  .icons /deep/ .swiper-pagination-bullet {
+    @include px-dpr(width, 8px);
+    @include px-dpr(height, 8px);
+    @include px-dpr(margin-left, 5px);
+    @include px-dpr(margin-right, 5px);
   }
-  .swiper-pagination-bullets {
-    bottom: 0 !important;
+  .icons /deep/ .swiper-container {
+    height: px2rem(415px);
   }
-
+  .icons /deep/ .swiper-pagination-bullets {
+    bottom: px2rem(10px);
+  }
   .icons {
-    width: 100%;
-    height: px2rem(370px);
-    padding-top: px2rem(10px);
-    margin-bottom: px2rem(20px);
-    overflow: hidden;
+    height: px2rem(415px);
+    margin-top: px2rem(10px);
 
     .icon {
-      width: 25%;
-      height: px2rem(150px);
-      float: left;
-      padding-top: px2rem(10px);
-      text-align: center;
       overflow: hidden;
+      position: relative;
+      float: left;
+      width: 25%;
+      height: 0;
+      /* padding-bottom百分比是以包裹它的容器的宽度作为计算基准 */
+      padding-bottom: 25%;
 
       .icon-img-wrapper {
-        display: inline-block;
-        width: px2rem(100px);
-        height: px2rem(100px);
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: px2rem(44px);
+        padding: px2rem(10px);
 
         .icon-img {
-          width: px2rem(100px);
-          height: px2rem(100px);
+          display: block;
+          margin: 0 auto;
+          height: 100%;
         }
       }
 
       .icon-desc {
-        margin-top: px2rem(18px);
-        color: #212121;
-        height: px2rem(32px);
-        line-height: px2rem(32px);
-        font-size: px2rem(28px);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: px2rem(44px);
+        line-height: px2rem(44px);
+        text-align: center;
+        color: #333;
+        @include font-dpr(14px);
         @include ellipsis;
       }
     }
-  }
-</style>
-
-<style scoped>
-  .icons >>> .swiper-pagination-bullet-active {
-    background: rgba(0,175,190,.8) !important;
   }
 </style>

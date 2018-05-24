@@ -2,7 +2,7 @@
   <div>
     <div class="title">周末去哪儿</div>
     <ul>
-      <li class="item border-bottom" v-for="item of weekendList" :key="item.id">
+      <li class="item" v-for="item of weekendList" :key="item.id">
         <div class="item-img-wrapper">
           <img class="item-img" :src="item.imgURL" :alt="item.title">
         </div>
@@ -26,16 +26,13 @@ export default {
 
 <style lang="scss" scoped>
   .title {
-    // margin-top: px2rem(20px);
-    // line-height: px2rem(80px);
-    // text-indent: px2rem(20px);
-    padding: px2rem(30px) px2rem(20px);
+    padding: px2rem(30px) 0;
     background: #eee;
-    font-size: px2rem(28px);
+    @include font-dpr(16px);
+    text-indent: px2rem(20px);
   }
   .item {
-    width: 100%;
-    overflow: hidden;
+    @include font-dpr(14px);
 
     .item-img-wrapper {
       overflow: hidden;
@@ -48,17 +45,16 @@ export default {
     }
 
     .item-info {
-      font-size: px2rem(28px);
-      padding: px2rem(20px);
+      padding: px2rem(10px);
 
       .item-title {
         line-height: px2rem(54px);
-        font-size: px2rem(32px);
+        @include font-dpr(16px);
         @include ellipsis;
       }
 
       .item-desc {
-        line-height: px2rem(54px);
+        line-height: px2rem(40px);
         color: #ccc;
         @include ellipsis;
       }
