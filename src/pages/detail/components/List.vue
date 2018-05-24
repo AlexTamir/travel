@@ -25,7 +25,7 @@ export default {
   .item-title {
     line-height: px2rem(80px);
     padding: 0 px2rem(20px);
-    border-bottom: 1px solid #eaeaea;
+    @include borderBottom;
     @include font-dpr(16px);
 
     .item-title-icon {

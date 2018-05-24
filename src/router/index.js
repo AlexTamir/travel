@@ -20,7 +20,8 @@ export default new Router({
       name: 'City',
       component: () => import('@/pages/city/City'),
       meta: {
-        keepAlive: true // 此组件需要被缓存
+        keepAlive: true, // 此组件需要被缓存
+        savedPosition: 0
       }
     },
     {
@@ -28,7 +29,8 @@ export default new Router({
       name: 'Detail',
       component: () => import('@/pages/detail/Detail'),
       meta: {
-        keepAlive: false // 此组件不需要被缓存
+        keepAlive: false, // 此组件不需要被缓存
+        savedPosition: 0
       }
     }
   ],

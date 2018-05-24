@@ -98,6 +98,7 @@ export default {
         color: #333;
         @include font-dpr(14px);
         @include ellipsis;
+        padding: 0 px2rem(10px);
       }
     }
   }

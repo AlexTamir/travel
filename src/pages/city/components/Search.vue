@@ -101,7 +101,7 @@ export default {
     .search-item {
       line-height: px2rem(62px);
       padding-left: px2rem(20px);
-      border-bottom: 1px solid #eaeaea;
+      @include borderBottom;
       color: #666;
       background: #fff;
       @include font-dpr(14px);

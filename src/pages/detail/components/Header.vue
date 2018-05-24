@@ -26,9 +26,9 @@ export default {
   methods: {
     handleScroll () {
       const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
-      if (scrollTop > 0) {
+      if (scrollTop > 60) {
         // 处理fixed头部渐隐渐现效果
-        let opacity = scrollTop / 80
+        let opacity = scrollTop / 140
         opacity = opacity > 1 ? 1 : opacity
         this.opacityStyle = { opacity }
         this.isShowAbs = false

@@ -2,7 +2,7 @@
  * @Author: Tamir 
  * @Date: 2018-05-12 22:14:07 
  * @Last Modified by: Tamir
- * @Last Modified time: 2018-05-24 12:09:29
+ * @Last Modified time: 2018-05-24 20:55:27
  */
 
 // 界面顶部颜色
@@ -45,4 +45,81 @@ $bgColor: #00bcd4;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+// 1px边框处理
+@mixin borderTop($color: #eaeaea) {
+  & {
+    position: relative;
+  }
+
+  &::before {
+    overflow: hidden;
+    content: '\0020';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid $color;
+  }
+
+  @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49),
+  (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49),
+  (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49),
+  (min-resolution: 144dpi) and (max-resolution: 239dpi),
+  (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+    [data-dpr="1"] &::before { 
+      transform: scaleY(.5);
+    }
+  }
+
+  @media (min--moz-device-pixel-ratio: 2.5),
+  (-webkit-min-device-pixel-ratio: 2.5),
+  (min-device-pixel-ratio: 2.5),
+  (min-resolution: 240dpi),
+  (min-resolution: 2.5dppx) {
+    [data-dpr="1"] &::before { 
+      transform: scaleY(.33333);
+    }
+  }
+}
+
+@mixin borderBottom($color: #eaeaea) {
+  & {
+    position: relative;
+  }
+
+  &::after {
+    overflow: hidden;
+    content: '\0020';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid $color;
+  }
+
+  @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49),
+  (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49),
+  (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49),
+  (min-resolution: 144dpi) and (max-resolution: 239dpi),
+  (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+    [data-dpr="1"] &::before {
+      transform-origin: 0 0;
+      transform: scaleY(.5);
+    }
+  }
+
+  @media (min--moz-device-pixel-ratio: 2.5),
+  (-webkit-min-device-pixel-ratio: 2.5),
+  (min-device-pixel-ratio: 2.5),
+  (min-resolution: 240dpi),
+  (min-resolution: 2.5dppx) {
+    [data-dpr="1"] &::before {
+      transform-origin: 0 0;
+      transform: scaleY(.33333);
+    }
+  }
 }

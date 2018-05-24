@@ -63,12 +63,14 @@ export default {
     }
 
     .header-right {
+      min-width: px2rem(104px);
       float: right;
       padding: 0 px2rem(10px);
       text-align: center;
       color: #fff;
 
       .arrow-icon {
+        margin-left: px2rem(-4px);
         @include font-dpr(12px);
       }
     }

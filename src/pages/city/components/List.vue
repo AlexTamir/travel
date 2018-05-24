@@ -51,7 +51,7 @@ export default {
     },
     ...mapMutations(['changeCity'])
   },
-  mounted () {
+  activated () {
     this.scroll = new Bscroll(this.$refs.wrapper, { click: true })
   },
   watch: {
@@ -76,10 +76,10 @@ export default {
     @include font-dpr(14px);
 
     .title {
-      line-height: px2rem(54px);
-      padding-left: px2rem(20px);
-      border-top: 1px solid #ccc;
-      border-bottom: 1px solid #ccc;
+      // line-height: px2rem(54px);
+      padding: px2rem(20px);
+      // border-top: 1px solid #ccc;
+      // border-bottom: 1px solid #ccc;
       background: #eee;
       color: #666;
     }
@@ -95,7 +95,7 @@ export default {
           margin: px2rem(10px);
           padding: px2rem(10px) 0;
           text-align: center;
-          border: 2px solid #ccc;
+          border: 1px solid #ccc;
           border-radius: px2rem(6px);
         }
       }
@@ -103,7 +103,7 @@ export default {
     .item{
       line-height: px2rem(76px);
       padding-left: px2rem(20px);
-      border-bottom: 1px solid #ccc;
+      @include borderBottom;
     }
   }
 </style>
