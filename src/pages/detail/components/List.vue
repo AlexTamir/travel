@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="item" v-for="(item, index) of list" :key="index">
-      <div class="item-title border-bottom">
+      <div class="item-title">
         <span class="item-title-icon"></span>
         {{item.title}}
       </div>
@@ -23,17 +23,16 @@ export default {
 
 <style lang="scss" scoped>
   .item-title {
-    line-height: px2rem(90px);
-    padding-left: px2rem(20px);
-    text-indent: px2rem(40px);
-    font-size: px2rem(30px);
-    position: relative;
+    line-height: px2rem(80px);
+    padding: 0 px2rem(20px);
+    border-bottom: 1px solid #eaeaea;
+    @include font-dpr(16px);
 
     .item-title-icon {
       display: inline-block;
-      position: absolute;
-      top: px2rem(28px);
-      left: px2rem(20px);
+      position: relative;
+      top: px2rem(6px);
+      left: px2rem(6px);
       width: px2rem(36px);
       height: px2rem(36px);
       background: url(http://s.qunarzz.com/piao/image/touch/sight/detail.png) 0 px2rem(-45px) no-repeat;
@@ -41,6 +40,6 @@ export default {
     }
   }
   .item-children {
-    padding-left: px2rem(20px);
+    padding: 0 px2rem(20px);
   }
 </style>

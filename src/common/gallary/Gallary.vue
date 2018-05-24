@@ -44,6 +44,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .container /deep/ .swiper-container {
+    overflow: inherit !important;
+  }
+  .container /deep/ .swiper-pagination {
+    color: #fff;
+    bottom: px2rem(-100px);
+  }
   .container {
     display: flex;
     align-items: center;
@@ -56,30 +63,13 @@ export default {
     background: #000;
 
     .wrapper {
-      flex: 1;
       width: 100%;
       height: 0;
       padding-bottom: 100%;
 
-      .swiper-container {
-        height: setHeight(750px);
-
-        .gallary-img {
-          width: 100%;
-          height: setImgHeight(750px);
-        }
-
-        .swiper-pagination {
-          color: #fff;
-          bottom: 0;
-        }
+      .gallary-img {
+        width: 100%;
       }
     }
-  }
-</style>
-
-<style scoped>
-  .container >>> .swiper-container {
-    overflow: inherit !important;
   }
 </style>

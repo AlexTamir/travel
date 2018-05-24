@@ -40,7 +40,7 @@ export default {
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
   },
-  beforeDestroy () {
+  destoryed () {
     window.removeEventListener('scroll', this.handleScroll)
   }
 }
@@ -49,19 +49,18 @@ export default {
 <style lang="scss" scoped>
   .header-abs {
     position: absolute;
-    top: px2rem(10px);
-    left: px2rem(10px);
+    top: px2rem(20px);
+    left: px2rem(20px);
     width: px2rem(80px);
     height: px2rem(80px);
     line-height: px2rem(80px);
-    text-align: center;
     border-radius: px2rem(40px);
+    text-align: center;
     background: rgba(0, 0, 0, .8);
 
     .abs-backicon {
       color: #fff;
-      font-size: px2rem(35px);
-      font-weight: bold;
+      @include font-dpr(20px);
     }
   }
   .header-fixed {
@@ -71,24 +70,21 @@ export default {
     top: 0;
     left: 0;
     right: 0;
-    width: 100%;
-    height: px2rem(88px);
-    line-height: px2rem(88px);
-    text-align: center;
-    font-size: 16px;
-    color: #fff;
+    height: px2rem(86px);
+    line-height: px2rem(86px);
     background: $bgColor;
+    color: #fff;
+    @include font-dpr(16px);
+    text-align: center;
 
     .fixed-backicon {
       position: absolute;
       left: 0;
       top: 0;
-      width: px2rem(80px);
-      height: px2rem(88px);
-      line-height: px2rem(88px);
+      width: px2rem(64px);
+      text-align: center;
       color: #fff;
-      font-size: px2rem(35px);
-      font-weight: bold;
+      @include font-dpr(20px);
     }
   }
 </style>

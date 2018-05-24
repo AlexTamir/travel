@@ -49,10 +49,10 @@ export default {
 
 <style lang="scss" scoped>
   .banner {
+    position: relative;
     overflow: hidden;
     height: 0;
     padding-bottom: 55%;
-    position: relative;
 
     .banner-img {
       width: 100%;
@@ -65,40 +65,27 @@ export default {
       left: 0;
       right: 0;
       bottom: 0;
-      padding-bottom: px2rem(20px);
+      line-height: px2rem(60px);
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .8));
       color: #fff;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, .7);
-
-      &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        min-height: px2rem(40px);
-        background: transparent;
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .8));
-      }
 
       .banner-title {
         flex: 1;
-        font-size: 18px;
-        padding-left: px2rem(20px);
+        @include font-dpr(16px);
+        padding: 0 px2rem(20px);
       }
 
       .banner-number {
         height: px2rem(32px);
         line-height: px2rem(32px);
-        padding: px2rem(7px) px2rem(40px);
+        padding: px2rem(4px) px2rem(40px);
         margin-right: px2rem(20px);
         background: rgba(0, 0, 0, .5);
         border-radius: px2rem(20px);
-        font-size: px2rem(24px);
+        @include font-dpr(12px);
 
         .banner-icon {
-          font-size: px2rem(24px);
-          margin-right: px2rem(6px);
+          @include font-dpr(12px);
         }
       }
     }
