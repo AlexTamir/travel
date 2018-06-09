@@ -39,9 +39,14 @@ export default {
   methods: {
     handleBannerClick () {
       this.isShowGallary = true
+      window.addEventListener('touchmove', this.preventDef, {passive: false})
     },
     handleGallaryClose () {
       this.isShowGallary = false
+      window.removeEventListener('touchmove', this.preventDef, {passive: false})
+    },
+    preventDef (e) {
+      e.preventDefault()
     }
   }
 }
